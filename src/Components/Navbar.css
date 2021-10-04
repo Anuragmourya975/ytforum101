@@ -1,0 +1,5 @@
+.btn-outline-primary:hover {
+  color: rgba(255, 255, 255, 0);
+  background-color: #0d6dfd00;
+  border-color: #e6e6e600;
+}
