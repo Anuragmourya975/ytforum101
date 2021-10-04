@@ -1,5 +1,5 @@
 import "./App.css";
-import Navbar from "./Components/Navbar101";
+// import Navbar from "./Components/Navbar101";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar101 from "./Components/Navbar101";
 import Cards101 from "./Components/Cards101";

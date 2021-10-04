@@ -2,16 +2,19 @@ import React from "react";
 // import Button from "react-bootstrap/Button";
 import "./Navbar.css";
 import Form101 from "./Form101";
-import {
-  Container,
-  NavDropdown,
-  Nav,
-  Navbar,
-  Form,
-  FormControl,
-} from "react-bootstrap";
+import { Container, Navbar, OverlayTrigger, Tooltip } from "react-bootstrap";
 
 function Navbar101() {
+  const renderTooltip = (props) => (
+    <Tooltip id="Upvote " {...props}>
+      Add Channels
+    </Tooltip>
+  );
+  const renderTooltip2 = (props) => (
+    <Tooltip id="Upvote " {...props}>
+      Profile
+    </Tooltip>
+  );
   const [modalShow, setModalShow] = React.useState(false);
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
@@ -44,29 +47,42 @@ function Navbar101() {
             </button>
           </form>
         </div>
-        <Navbar.Brand href="#home">
-          {" "}
-          <img
-            alt=""
-            src="https://images.vexels.com/media/users/3/193251/isolated/lists/b23a8130b03eff475be26b2275ebfc19-covid-19-man-character-icon.png"
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-          />{" "}
-        </Navbar.Brand>
-        <Navbar.Brand
-          onClick={() => setModalShow(true)}
-          style={{ cursor: "pointer" }}
+        <OverlayTrigger
+          placement="bottom"
+          delay={{ show: 250, hide: 400 }}
+          overlay={renderTooltip2}
         >
-          {" "}
-          <img
-            alt=""
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/640px-YouTube_full-color_icon_%282017%29.svg.png"
-            width="45"
-            height="30"
-            className="d-inline-block align-top"
-          />{" "}
-        </Navbar.Brand>
+          <Navbar.Brand href="#home">
+            {" "}
+            <img
+              alt=""
+              src="https://images.vexels.com/media/users/3/193251/isolated/lists/b23a8130b03eff475be26b2275ebfc19-covid-19-man-character-icon.png"
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />{" "}
+          </Navbar.Brand>
+        </OverlayTrigger>
+        <OverlayTrigger
+          placement="right"
+          delay={{ show: 250, hide: 400 }}
+          overlay={renderTooltip}
+        >
+          <Navbar.Brand
+            onClick={() => setModalShow(true)}
+            style={{ cursor: "pointer" }}
+          >
+            {" "}
+            <img
+              alt=""
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/640px-YouTube_full-color_icon_%282017%29.svg.png"
+              width="45"
+              height="30"
+              className="d-inline-block align-top"
+            />{" "}
+          </Navbar.Brand>
+        </OverlayTrigger>
+
         <Form101 show={modalShow} onHide={() => setModalShow(false)} />
       </Container>
     </Navbar>

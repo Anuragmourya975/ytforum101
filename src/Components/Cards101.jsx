@@ -1,14 +1,8 @@
 import React from "react";
 import "./Cards.css";
-import { Row, Col, Card, Container, Button } from "react-bootstrap";
-import {
-  ChevronDoubleDown,
-  ChevronDoubleUp,
-  // ArrowDown,
-  ChatRightDots,
-  // Capslock,
-  Link,
-} from "react-bootstrap-icons";
+import { Row, Col, Card, Container } from "react-bootstrap";
+
+import Vote from "./Vote";
 
 function Cards101() {
   return (
@@ -24,17 +18,12 @@ function Cards101() {
               <Card.Body>
                 <Card.Title>Card title</Card.Title>
                 <Card.Text>
-                  This is a longer card with supporting text below as a natural
-                  lead-in to additional content. This content is a little bit
-                  longer.
+                  This is a hello world longer card with supporting text below
+                  as a natural lead-in to additional content. This content is a
+                  little bit longer.
                 </Card.Text>
                 <hr />
-                <div className="d-flex justify-content-evenly">
-                  <ChevronDoubleUp className="Icons" />
-                  <ChevronDoubleDown className="Icons" />
-                  <ChatRightDots className="Icons" />
-                  <Link className="Icons" />
-                </div>
+                <Vote />
               </Card.Body>
               <Card.Footer>
                 <small className="text-muted">Last updated 3 mins ago</small>
