@@ -1,5 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 .btn-outline-primary:hover {
   color: rgba(255, 255, 255, 0);
   background-color: #0d6dfd00;
   border-color: #e6e6e600;
+}
+.drawer-menu{
+  background-color: #212529;
+  width:280px ;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right:-100%;
+  transition:850ms;
+  color:white;
+}
+
+.drawer-menu.active{
+  right: 0;
+  transition: 350ms;
+}
+
+.drawer-text{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  list-style: none;
+  height: 60px;
+  color:white;
+  font-size: 18px;
+  width: 95%;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+}
+.drawer-menu-items{
+  width: 100%;
+  padding: 10px;
+}
+.drawer-item-div{
+  margin: 10px;
+}
+
+.drawer-toggle{
+  background-color:#212529 ;
+  width: 90%;
+  margin-left: 5px;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.drawer-text:hover{
+  background-color: #1a83ff;
 }
