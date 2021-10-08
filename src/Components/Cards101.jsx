@@ -10,12 +10,16 @@ import {
   Link,
 } from "react-bootstrap-icons";
 
+import {NavLink} from 'react-router-dom';
+
+
 function Cards101() {
   return (
     <Container>
       <Row xs={1} md={2} lg={3} className="g-4">
         {Array.from({ length: 7 }).map((_, idx) => (
           <Col>
+              <NavLink style = {{textDecoration: "none", color:"inherit"}} to= "/carddetails">
             <Card>
               <Card.Img
                 variant="top"
@@ -40,6 +44,7 @@ function Cards101() {
                 <small className="text-muted">Last updated 3 mins ago</small>
               </Card.Footer>
             </Card>
+            </NavLink>
           </Col>
         ))}
       </Row>
