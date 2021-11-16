@@ -1,0 +1,17 @@
+.btn-outline-primary:hover {
+  color: rgba(255, 255, 255, 0);
+  background-color: #0d6dfd00;
+  border-color: #e6e6e600;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+.nav-link {
+  display: flex;
+  padding: 0.5px 1px;
+  color: #0d6efd;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+
