@@ -4,6 +4,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar101 from "./Components/Navbar101";
 // import Cards101 from "./Components/Cards101";
+import { useParams } from "react-router-dom";
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
@@ -15,6 +16,7 @@ import Home from "./Components/Home/Home";
 // import Comment from "./Components/Comment Section/Comment";
 import Comment from "./Components/Comment Section/Comment"
 import PostDetails from "./Components/Posts/Post/PostDetails";
+
 function App() {
   return (
     <div className="App">

@@ -14,7 +14,7 @@ export default class Comment extends Component {
     scriptEl.setAttribute("async", true);
     scriptEl.setAttribute("repo", "Anuragmourya975/ytforum101");
     scriptEl.setAttribute("issue-term", "url");
-    scriptEl.setAttribute("theme", "github-light");
+    scriptEl.setAttribute("theme", "boxy-light");
     this.commentBox.current.appendChild(scriptEl);
   }
 
